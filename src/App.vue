@@ -1,27 +1,47 @@
 <style>
   #app{
-   padding:20px;
+    height:100vh;
+
+  }
+  #left-nav{
+    height:100vh;
+    width: 240px;
+    background: #303238;
+    position: fixed;
+  }
+
+  #right-content{
+    margin-left: 240px;
+    width: calc(100% - 240px);
+  }
+  #container{
+    padding: 20px;
   }
 </style>
 
 <template>
   <div id="app">
     <Row>
-      <i-col :span="8">
+      <div id="left-nav">
         <leftNav></leftNav>
-      </i-col>
-      <i-col :span="16">
-        <router-view></router-view>
-      </i-col>
+      </div>
+     <div id="right-content">
+       <headerBar></headerBar>
+       <div id="container">
+         <router-view></router-view>
+       </div>
+
+     </div>
     </Row>
   </div>
 </template>
 
 <script>
-  import leftNav from './components/left.vue'
+  import leftNav from './components/leftNav.vue'
+  import headerBar from './components/header.vue'
 export default {
   name: 'app',
-  components:{leftNav}
+  components:{leftNav,headerBar}
 }
 </script>
 

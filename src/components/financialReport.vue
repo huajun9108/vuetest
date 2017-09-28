@@ -1,9 +1,9 @@
 <template>
-  <h1>这是首页</h1>
+  <h1>financial report</h1>
 </template>
 
 <script>
     export default {
-        name:'home'
+        name:'financialReport'
     }
 </script>

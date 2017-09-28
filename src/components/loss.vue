@@ -1,0 +1,39 @@
+<style>
+  #lossContainer{
+    padding:20px;
+  }
+</style>
+
+<template>
+  <div id="loss">
+    <RadioGroup v-model="value" type="button" @on-change="change()">
+      <Radio label="machine"></Radio>
+      <Radio label="material"></Radio>
+      <Radio label="volume"></Radio>
+      <Radio label="energy"></Radio>
+      <Radio label="manpower"></Radio>
+      <Radio label="main tenance"></Radio>
+    </RadioGroup>
+    <div id="lossContainer">
+      <router-view></router-view>
+    </div>
+  </div>
+</template>
+
+<script>
+    export default{
+        name:'left1',
+        data() {
+          return{
+              value:'machine'
+          }
+        },
+        methods:{
+            change:function () {
+               this.$router.push(`/loss/${this.value}`)
+            }
+        },
+        mounted:function () {
+        }
+    }
+</script>
