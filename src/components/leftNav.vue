@@ -10,7 +10,7 @@
         loss
       </MenuItem>
     </router-link>
-    <router-link to="/operation KPI">
+    <router-link to="/operationKPI">
       <MenuItem name="operation KPI">
         operation KPI
       </MenuItem>

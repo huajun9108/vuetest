@@ -26,7 +26,7 @@
     name: 'machine',
     data() {
       return {
-        value: ''
+        value: 'overview'
       }
     },
     methods: {

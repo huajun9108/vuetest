@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import financialReport from '../components/financialReport.vue'
 import loss from  '../components/loss.vue'
+import operationKPI from '../components/operationKPI.vue'
+
 import  material  from  '../components/material.vue'
 import volume from  '../components/volume.vue'
 import energy from  '../components/energy.vue'
@@ -56,7 +58,8 @@ export default new Router({
               name: 'grafico OEE',
               component: graficoOEE,
             }
-          ]
+          ],
+          redirect: '/loss/machine/overview'
         },
         {
           path: 'material',
@@ -85,6 +88,12 @@ export default new Router({
         },
       ],
       redirect: '/loss/machine'
+    },
+
+    {
+      path: '/operationKPI',
+      name: 'operationKPI',
+      component: operationKPI,
     },
 
     {

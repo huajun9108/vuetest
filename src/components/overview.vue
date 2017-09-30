@@ -1,9 +1,21 @@
 <style  scoped>
+#overview{
+  background-color: gray;
+  border: 1px solid;
+}
+.table {
+  float: left;
+  margin: 20px 20px 20px 20px;
+}
 </style>
 
 <template>
   <div id="overview">
-    <Table :columns="columns1" :data="data1"></Table>
+
+    <Table class="table" border :columns="columns1" :data="data1"></Table>
+      <Table class="table" border :columns="columns1" :data="data1"></Table>
+    <Table class="table" border :columns="columns1" :data="data1"></Table>
+    <Table class="table" border :columns="columns1" :data="data1"></Table>
   </div>
 </template>
 
@@ -13,39 +25,62 @@
             return{
               columns1: [
                 {
-                  title: '姓名',
-                  key: 'name'
+                  title: '标题1',
+                  key: 'title1'
                 },
                 {
-                  title: '年龄',
-                  key: 'age'
+                  title: '标题2',
+                  key: 'title2'
                 },
                 {
-                  title: '地址',
-                  key: 'address'
-                }
+                  title: '标题3',
+                  key: 'title3'
+                },
+                {
+                  title: '标题4',
+                  key: 'title4',
+                },
+                {
+                  title: '标题5',
+                  key: 'title5'
+                },
               ],
               data1: [
                 {
-                  name: '王小明',
-                  age: 18,
-                  address: '北京市朝阳区芍药居'
+                  title1: '',
+                  title2: '',
+                  title3: '',
+                  title4: '',
+                  title5: '',
                 },
                 {
-                  name: '张小刚',
-                  age: 25,
-                  address: '北京市海淀区西二旗'
+                  title1: '',
+                  title2: '',
+                  title3: '',
+                  title4: '',
+                  title5: '',
                 },
                 {
-                  name: '李小红',
-                  age: 30,
-                  address: '上海市浦东新区世纪大道'
+                  title1: '',
+                  title2: '',
+                  title3: '',
+                  title4: '',
+                  title5: '',
                 },
                 {
-                  name: '周小伟',
-                  age: 26,
-                  address: '深圳市南山区深南大道'
-                }
+                  title1: '',
+                  title2: '',
+                  title3: '',
+                  title4: '',
+                  title5: '',
+                },
+                {
+                  title1: '',
+                  title2: '',
+                  title3: '',
+                  title4: '',
+                  title5: '',
+                },
               ]
             }
         }
