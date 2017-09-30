@@ -9,16 +9,16 @@ import energy from  '../components/energy.vue'
 import manpower from  '../components/manpower.vue'
 import maintenance from  '../components/maintenance.vue'
 
-
-
-
-
 import machine from  '../components/machine.vue'
-
+import machineKPI from '../components/machineKPI.vue'
 
 import overview from  '../components/overview.vue'
 import oEEnolosses from  '../components/oEEnolosses.vue'
 import graficoOEE from  '../components/graficoOEE.vue'
+
+import breakdown from '../components/breakdown.vue'
+import list from '../components/list.vue'
+import pareToChat from '../components/pareToChat.vue'
 
 import left2 from  '../components/material.vue'
 import savingBook from  '../components/savingBook.vue'
@@ -94,6 +94,33 @@ export default new Router({
       path: '/operationKPI',
       name: 'operationKPI',
       component: operationKPI,
+      children: [
+        {
+          path:'machineKPI',
+          name:'machineKPI',
+          component: machineKPI,
+          children: [
+            {
+              path: 'breakdown',
+              name: 'breakdown',
+              component: breakdown,
+              children: [
+                {
+                  path: 'list',
+                  name: 'list',
+                  component: list,
+                },
+                {
+                  path: 'pare to chat',
+                  name: 'pareToChat',
+                  component: pareToChat,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      redirect: '/operationKPI/machineKPI',
     },
 
     {
