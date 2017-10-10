@@ -1,5 +1,5 @@
 <style scoped>
-#main-charts {
+#oEE-charts {
   width: 600px;
   height: 400px;
 }
@@ -7,55 +7,92 @@
 
 <template>
 <div>
-  <div id="main-charts"></div>
+  <div id="oEE-charts"></div>
 </div>
 </template>
 
 <script>
-import echarts from 'echarts'
-export default {
-  data() {
-    return {}
+import echarts from  'echarts'
+export default{
+  data(){
+      return{}
   },
   methods: {
-    initCharts: function(columnLabel, columnName, columnValue) {
-      var chart = document.getElementById('main-charts');
-      var echart = echarts.init(chart);
-      var option = {
-        title: {
-          text: 'ECharts示例'
+    initCharts: function () {
+    var myChart = echarts.init(document.getElementById('oEE-charts'));
+    var option = {  
+      title: {    
+        text: '世界人口总量',
+            subtext: '数据来自网络'  
+      },
+      tooltip: {    
+        trigger: 'axis'  
+      },
+        legend: {    
+        data: ['2011年', '2012年']  
+      },
+        toolbox: {    
+        show: true,
+            feature: {      
+          mark: {
+            show: true
+          },
+                dataView: {
+            show: true,
+            readOnly: false
+          },
+                magicType: {
+            show: true,
+            type: ['line', 'bar']
+          },
+                restore: {
+            show: true
+          },
+                saveAsImage: {
+            show: true
+          }    
+        }  
+      },
+        calculable: true,
+        xAxis: [    {
+        type: 'category',
+        axisTick: {
+          show: false,
         },
-        tooltip: {},
-        legend: {
-          data: columnLabel
+        data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']    
+      }  ],
+        yAxis: [    {
+        show: false,
+          
+        type: 'value',
+      }  ],
+        series: [    {   
+        barGap: '0',
+        name: '2011年',
+              type: 'bar',
+        itemStyle: {
+          normal: {
+            color: '#0084c8'
+          }
         },
-        xAxis: [{
-          type: 'category',
-          data: columnName
-        }],
-        yAxis: {},
-        series: columnValue
-      };
-      echart.setOption(option);  
-    },
-    initData: function() {
-      var columnLabel = ['甲', '乙'];
-      var  columnName  =   ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];          
-      var  columnValue  =  new  Array();          
-      var  arrData  =  new  Array();
-      for (var  i = 0; i < columnLabel.length; i++)                    {                      
-        for (var  j = 0; j < columnName.length; j++)                        {                          
-          arrData.push(Math.floor(Math.random() * 1000 + 1000 * j - 1000 * i));                      
-        }                      
-        console.info(arrData);                      
-        columnValue.push(eval('('  +  ("{'name':'" + columnLabel[i] + "','type':'bar','data':[" + arrData + "]}")  +  ')'));                  
-      }                                    
-      initCharts(columnLabel, columnName, columnValue);    
-    },                                   
-  },
+              data: [18203, 23489, 29034, 104970, 131744, 630230]    
+      },      {      
+        name: '2012年',
+              type: 'bar',
+        itemStyle: {
+          normal: {
+            color: '#ddd'
+          }
+        },
+              data: [19325, 23438, 31000, 121594, 134141, 681807]    
+      }  ]
+    };
+    myChart.setOption(option);
+    }
 
-  mounted: function() {
-    this.initData();
+  },
+  mounted: function () {
+    this.initCharts();
   }
 }
 </script>

@@ -20,24 +20,85 @@
     methods: {
       initCharts: function () {
         var myChart = echarts.init(document.getElementById('main-charts'));
-        var option = {
-          title: {
-            text: 'ECharts 入门示例'
+        var option = {  
+      title: {    
+        text: '甘特图',
+      },
+      tooltip: {    
+        trigger: 'axis'  
+      },
+        legend: {    
+        data: ['completed', 'undone']  
+      },
+        toolbox: {    
+        show: true,
+            feature: {      
+          mark: {
+            show: true
           },
-          tooltip: {},
-          legend: {
-            data: ['销量']
+                dataView: {
+            show: true,
+            readOnly: false
           },
-          xAxis: {
-            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+                magicType: {
+            show: true,
+            type: ['line', 'bar']
           },
-          yAxis: {},
-          series: [{
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-          }]
-        };
+                restore: {
+            show: true
+          },
+                saveAsImage: {
+            show: true
+          }    
+        }  
+      },
+        calculable: true,
+        xAxis: [    {
+        axisTick: {
+          show: false,
+        },
+        type: 'value',
+        splitLine: {
+          show: false,
+        },
+        axisLabel: {
+          show: false,
+        },
+
+      }  ],
+        yAxis: [    {  
+        type: 'category',
+        splitLine: {
+          show: true,
+        },
+        axisTick: {
+          show: false,
+        },
+        data: ['任务A', '任务B', '任务C', '任务D', '任务E', '任务F']    
+      }  ],
+        series: [    {   
+        barGap: '-100%',
+        name: 'completed',
+              type: 'bar',
+        zlevel: 1,
+        itemStyle: {
+          normal: {
+            color: '#0084c8'
+          }
+        },
+        data: [10234, 13456, 23456, 78901, 89098, 545679],
+            
+      },      {      
+        name: 'undone',
+              type: 'bar',
+        itemStyle: {
+          normal: {
+            color: '#ddd'
+          }
+        },
+        data: [19325, 23438, 31000, 121594, 134141, 681807]    
+      }  ]
+    };
         myChart.setOption(option);
       }
 

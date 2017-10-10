@@ -20,23 +20,72 @@ export default{
   methods: {
     initCharts: function () {
       var myChart = echarts.init(document.getElementById('grafico-charts'));
-      var option = {
-        title: {
-          text: 'ECharts 入门示例'
+      var option = {  
+        title: {    
+          text: '世界人口总量',
+              subtext: '数据来自网络'  
         },
-        tooltip: {},
-        legend: {
-          data: ['销量']
+        tooltip: {    
+          trigger: 'axis'  
         },
-        xAxis: {
-          data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+          legend: {    
+          data: ['2011年', '2012年']  
         },
-        yAxis: {},
-        series: [{
-          name: '销量',
-          type: 'bar',
-          data: [5, 20, 36, 10, 10, 20]
-        }]
+          toolbox: {    
+          show: true,
+              feature: {      
+            mark: {
+              show: true
+            },
+                  dataView: {
+              show: true,
+              readOnly: false
+            },
+                  magicType: {
+              show: true,
+              type: ['line', 'bar']
+            },
+                  restore: {
+              show: true
+            },
+                  saveAsImage: {
+              show: true
+            }    
+          }  
+        },
+          calculable: true,
+          xAxis: [    {
+          type: 'category',
+          axisTick: {
+            show: false,
+          },
+          data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']    
+        }  ],
+          yAxis: [    {
+          show: false,
+            
+          type: 'value',
+        }  ],
+          series: [    {   
+          barGap: '0',
+          name: '2011年',
+                type: 'bar',
+          itemStyle: {
+            normal: {
+              color: '#0084c8'
+            }
+          },
+                data: [18203, 23489, 29034, 104970, 131744, 630230]    
+        },      {      
+          name: '2012年',
+                type: 'bar',
+          itemStyle: {
+            normal: {
+              color: '#ddd'
+            }
+          },
+                data: [19325, 23438, 31000, 121594, 134141, 681807]    
+        }  ]
       };
       myChart.setOption(option);
     }
