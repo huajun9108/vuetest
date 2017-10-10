@@ -1,5 +1,5 @@
 <template>
-  <div id="overview">
+  <div>
     <h1>report form</h1>
     <Table class="table" border :columns="columns1" :data="data1"></Table>
   </div>

@@ -46,6 +46,22 @@
             {label: "manpowerKPI", key: 'manpower'},
             {label: "main tenanceKPI", key: 'main tenance'},
           ]
+        }else if(this.type==='singleAgenda'){
+          this.radio = [
+            {label: "machineAgenda", key: 'machine'},
+            {label: "volumeAgenda", key: 'volume'},
+            {label: "energyAgenda", key: 'energy'},
+            {label: "manpowerAgenda", key: 'manpower'},
+            {label: "main tenanceAgenda", key: 'main tenance'},
+          ]
+        }else if(this.type==='savingBook'){
+          this.radio = [
+            {label: "machineBook", key: 'machine'},
+            {label: "volumeBook", key: 'volume'},
+            {label: "energyBook", key: 'energy'},
+            {label: "manpowerBook", key: 'manpower'},
+            {label: "main tenanceBook", key: 'main tenance'},
+          ]
         }
 
       this.value = this.default;

@@ -40,6 +40,10 @@
                   title: '标题5',
                   key: 'title5'
                 },
+                {
+                  title: '标题6',
+                  key: 'title6'
+                }
               ],
               data1: [
                 {
@@ -48,6 +52,7 @@
                   title3: '',
                   title4: '',
                   title5: '',
+                  title6: '',
                 },
                 {
                   title1: '',
@@ -55,6 +60,7 @@
                   title3: '',
                   title4: '',
                   title5: '',
+                  title6: '',
                 },
                 {
                   title1: '',
@@ -62,6 +68,7 @@
                   title3: '',
                   title4: '',
                   title5: '',
+                  title6: '',
                 },
                 {
                   title1: '',
@@ -69,6 +76,7 @@
                   title3: '',
                   title4: '',
                   title5: '',
+                  title6: '',
                 },
                 {
                   title1: '',
@@ -76,6 +84,23 @@
                   title3: '',
                   title4: '',
                   title5: '',
+                  title6: '',
+                },
+                {
+                  title1: '',
+                  title2: '',
+                  title3: '',
+                  title4: '',
+                  title5: '',
+                  title6: '',
+                },
+                {
+                  title1: '',
+                  title2: '',
+                  title3: '',
+                  title4: '',
+                  title5: '',
+                  title6: '',
                 },
               ]
             }

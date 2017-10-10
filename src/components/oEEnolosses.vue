@@ -1,49 +1,61 @@
 <style scoped>
-  #main-charts {
-    width: 600px;
-    height: 400px;
-  }
+#main-charts {
+  width: 600px;
+  height: 400px;
+}
 </style>
 
 <template>
-  <div>
-    <div id="main-charts"></div>
-  </div>
+<div>
+  <div id="main-charts"></div>
+</div>
 </template>
 
 <script>
-  import echarts from  'echarts'
-  export default{
-    data(){
-        return{}
+import echarts from 'echarts'
+export default {
+  data() {
+    return {}
+  },
+  methods: {
+    initCharts: function(columnLabel, columnName, columnValue) {
+      var chart = document.getElementById('main-charts');
+      var echart = echarts.init(chart);
+      var option = {
+        title: {
+          text: 'ECharts示例'
+        },
+        tooltip: {},
+        legend: {
+          data: columnLabel
+        },
+        xAxis: [{
+          type: 'category',
+          data: columnName
+        }],
+        yAxis: {},
+        series: columnValue
+      };
+      echart.setOption(option);  
     },
-    methods: {
-      initCharts: function () {
-        var myChart = echarts.init(document.getElementById('main-charts'));
-        var option = {
-          title: {
-            text: 'ECharts 入门示例'
-          },
-          tooltip: {},
-          legend: {
-            data: ['销量']
-          },
-          xAxis: {
-            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-          },
-          yAxis: {},
-          series: [{
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-          }]
-        };
-        myChart.setOption(option);
-      }
+    initData: function() {
+      var columnLabel = ['甲', '乙'];
+      var  columnName  =   ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];          
+      var  columnValue  =  new  Array();          
+      var  arrData  =  new  Array();
+      for (var  i = 0; i < columnLabel.length; i++)                    {                      
+        for (var  j = 0; j < columnName.length; j++)                        {                          
+          arrData.push(Math.floor(Math.random() * 1000 + 1000 * j - 1000 * i));                      
+        }                      
+        console.info(arrData);                      
+        columnValue.push(eval('('  +  ("{'name':'" + columnLabel[i] + "','type':'bar','data':[" + arrData + "]}")  +  ')'));                  
+      }                                    
+      initCharts(columnLabel, columnName, columnValue);    
+    },                                   
+  },
 
-    },
-    mounted: function () {
-      this.initCharts();
-    }
+  mounted: function() {
+    this.initData();
   }
+}
 </script>

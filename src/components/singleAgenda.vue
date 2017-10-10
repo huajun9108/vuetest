@@ -1,13 +1,13 @@
 <style  scoped>
-  #bookContainer{
+  #agendaContainer{
     padding:20px 0px;
   }
 </style>
 
 <template>
   <div>
-    <ReuseableMenu default="machineBook" type="savingBook"></ReuseableMenu>
-    <div id="bookContainer">
+    <ReuseableMenu default="machineAgenda" type="singleAgenda"></ReuseableMenu>
+    <div id="agendaContainer">
       <router-view></router-view>
     </div>
   </div>
@@ -17,7 +17,7 @@
 <script>
   import ReuseableMenu from '../components/ReuseableMenu.vue'
     export default{
-      name: 'savingBook',
+      name: 'singleAgenda',
       components: {ReuseableMenu},
     }
 </script>
