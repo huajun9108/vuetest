@@ -1,19 +1,15 @@
 <style  scoped>
-#overview{
-  background-color: gray;
-  border: 1px solid;
-}
 .table {
   float: left;
-  margin: 20px 20px 20px 20px;
+  margin: 30px 30px 30px 30px;
 }
 </style>
 
 <template>
   <div id="overview">
-
+    <br />
     <Table class="table" border :columns="columns1" :data="data1"></Table>
-      <Table class="table" border :columns="columns1" :data="data1"></Table>
+    <Table class="table" border :columns="columns1" :data="data1"></Table>
     <Table class="table" border :columns="columns1" :data="data1"></Table>
     <Table class="table" border :columns="columns1" :data="data1"></Table>
   </div>

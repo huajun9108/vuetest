@@ -1,7 +1,25 @@
+<style scoped>
+  #reportFormTitle{
+    font-size: 28px;
+    font-family: "微软雅黑";
+  }
+  .ivu-table th .ivu-table-cell{
+    text-align: center;
+}
+  #tableContainer{
+    background-color: lightgray;
+    padding: 30px;
+  }
+</style>
+
 <template>
   <div>
-    <h1>report form</h1>
+    <div id="reportFormTitle">report form</div>
+    <hr></hr>
+    <br />
+    <div id="tableContainer">
     <Table class="table" border :columns="columns1" :data="data1"></Table>
+  </div>
   </div>
 </template>
 

@@ -26,7 +26,6 @@ router1.afterEach(() => {
   window.scrollTo(0, 0);
 });
 
-
 Vue.use(iView);
 
 new Vue({

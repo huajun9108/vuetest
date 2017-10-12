@@ -1,10 +1,6 @@
 <style  scoped>
-#list{
-  background-color: gray;
-  border: 1px solid;
-}
 .table {
-  float: left;
+  /*float: left;*/
   margin: 20px 20px 20px 20px;
 }
 </style>

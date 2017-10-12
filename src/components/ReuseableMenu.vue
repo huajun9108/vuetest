@@ -2,8 +2,8 @@
 </style>
 
 <template>
-  <RadioGroup v-model="value" type="button" @on-change="change()">
-    <Radio v-for="item in radio" :label="item.label" >{{item.key}}</Radio>
+  <RadioGroup v-model="value" type="radio" @on-change="change()">
+    <Radio v-for="(item,idx) in radio" :label="item.label" :key='idx'>{{item.key}}</Radio>
   </RadioGroup>
 </template>
 

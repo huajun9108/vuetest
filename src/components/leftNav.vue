@@ -1,5 +1,30 @@
+<style scoped>
+ .ivu-menu{
+   background: #0084c8;
+ }
+.ivu-menu-item{
+  color: #d4e2ed;
+  font-size: 24px;
+  font-family: "微软雅黑";
+}
+.ivu-menu-item:hover{
+  font-size: 26px;
+  background-color: #015c8b;
+  color: white;
+  font-family: "微软雅黑";
+}
+.ivu-menu-item-selected{
+  font-size: 26px;
+  background-color: #015c8b;
+  font-family: "微软雅黑";
+}
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    color: white;
+  }
+</style>
+
 <template>
-  <Menu theme="dark">
+  <Menu theme="light">
     <router-link to="/financialReport">
       <MenuItem name="financial report">
         financial report

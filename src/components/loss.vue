@@ -1,7 +1,7 @@
-<style>
-  #lossContainer{
-    padding:20px;
-  }
+<style scoped>
+#lossContainer{
+  padding:20px 0px;
+}
 </style>
 
 <template>

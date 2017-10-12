@@ -3,10 +3,19 @@
     height:100vh;
 
   }
+
+  #software-name{
+    background-color: #0084c8;
+    color: #8db0d1;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
   #left-nav{
     height:100vh;
     width: 240px;
-    background: #303238;
+    background: #0084c8;
     position: fixed;
   }
 
@@ -15,7 +24,7 @@
     width: calc(100% - 240px);
   }
   #container{
-    padding: 20px;
+    /*padding: 20px;*/
   }
 </style>
 
@@ -23,10 +32,13 @@
   <div id="app">
     <Row>
       <div id="left-nav">
+        <div id="software-name">
+          <pre>   EXCELLENCE
+         OPERATION</pre>
+        </div>
         <leftNav></leftNav>
       </div>
      <div id="right-content">
-       <headerBar></headerBar>
        <div id="container">
          <router-view></router-view>
        </div>
@@ -44,5 +56,3 @@ export default {
   components:{leftNav,headerBar}
 }
 </script>
-
-

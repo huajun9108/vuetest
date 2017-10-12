@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>single agenda</h1>
+    <hr>
+    <br />
     <Table class="table" border :columns="columns1" :data="data1"></Table>
   </div>
 </template>
