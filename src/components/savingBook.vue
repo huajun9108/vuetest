@@ -1,11 +1,14 @@
 <style  scoped>
+  #book{
+    padding: 20px;
+  }
   #bookContainer{
     padding:20px 0px;
   }
 </style>
 
 <template>
-  <div>
+  <div id=book>
     <ReuseableMenu default="machineBook" type="savingBook"></ReuseableMenu>
     <div id="bookContainer">
       <router-view></router-view>

@@ -1,11 +1,14 @@
 <style  scoped>
+#kpi{
+  padding: 20px;
+}
   #kpiContainer{
     padding:20px 0px;
   }
 </style>
 
 <template>
-  <div>
+  <div id="kpi">
     <ReuseableMenu default="machineKPI" type="operationKPI"></ReuseableMenu>
     <div id="kpiContainer">
       <router-view></router-view>

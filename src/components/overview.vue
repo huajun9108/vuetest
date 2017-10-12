@@ -7,7 +7,6 @@
 
 <template>
   <div id="overview">
-    <br />
     <Table class="table" border :columns="columns1" :data="data1"></Table>
     <Table class="table" border :columns="columns1" :data="data1"></Table>
     <Table class="table" border :columns="columns1" :data="data1"></Table>

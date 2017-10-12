@@ -1,4 +1,7 @@
 <style scoped>
+#loss{
+  padding: 20px;
+}
 #lossContainer{
   padding:20px 0px;
 }

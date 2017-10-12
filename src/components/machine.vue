@@ -9,6 +9,9 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   box-shadow:-1px 0 0 0  #0084c8;
   border-radius: 2em;
 }
+#machineContainer{
+  background-color: lightgray;
+}
 </style>
 
 <template>
@@ -23,7 +26,6 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
     <div id="machineContainer">
       <router-view></router-view>
     </div>
-
   </div>
 </template>
 

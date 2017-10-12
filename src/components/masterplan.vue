@@ -21,38 +21,9 @@
       initCharts: function () {
         var myChart = echarts.init(document.getElementById('main-charts'));
         var option = {  
-      title: {    
-        text: '甘特图',
-      },
-      tooltip: {    
-        trigger: 'axis'  
-      },
         legend: {    
         data: ['completed', 'undone']  
       },
-        toolbox: {    
-        show: true,
-            feature: {      
-          mark: {
-            show: true
-          },
-                dataView: {
-            show: true,
-            readOnly: false
-          },
-                magicType: {
-            show: true,
-            type: ['line', 'bar']
-          },
-                restore: {
-            show: true
-          },
-                saveAsImage: {
-            show: true
-          }    
-        }  
-      },
-        calculable: true,
         xAxis: [    {
         axisTick: {
           show: false,
@@ -70,6 +41,9 @@
         type: 'category',
         splitLine: {
           show: true,
+        },
+        axisLabel: {
+          show: false,
         },
         axisTick: {
           show: false,

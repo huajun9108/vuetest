@@ -1,7 +1,11 @@
 <style scoped>
+#report{
+  width: 90%;
+}
   #reportFormTitle{
     font-size: 28px;
     font-family: "微软雅黑";
+    padding: 20px;
   }
   .ivu-table th .ivu-table-cell{
     text-align: center;
@@ -13,10 +17,11 @@
 </style>
 
 <template>
-  <div>
-    <div id="reportFormTitle">report form</div>
-    <hr></hr>
-    <br />
+  <div id="report">
+    <div id="reportFormTitle">report form
+      <hr></hr>
+    </div>
+
     <div id="tableContainer">
     <Table class="table" border :columns="columns1" :data="data1"></Table>
   </div>

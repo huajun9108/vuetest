@@ -9,6 +9,9 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   box-shadow:-1px 0 0 0  #0084c8;
   border-radius: 2em;
 }
+#machineBookContainer{
+  background-color: lightgray;
+}
 </style>
 
 <template>

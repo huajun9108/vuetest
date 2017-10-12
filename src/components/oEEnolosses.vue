@@ -6,7 +6,7 @@
 </style>
 
 <template>
-<div>
+<div id="loss-machine-oEE">
   <div id="oEE-charts"></div>
 </div>
 </template>
