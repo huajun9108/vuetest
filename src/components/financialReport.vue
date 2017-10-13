@@ -37,33 +37,41 @@ export default{
     data(){
         return{
           columns1: [
+           
             {
               title: '标题1',
-              key: 'title1'
+              key: 'title1',
+              align:'center'
             },
             {
               title: '标题2',
-              key: 'title2'
+              key: 'title2',
+              align:'center'
             },
             {
               title: '标题3',
-              key: 'title3'
+              key: 'title3',
+              align:'center'
             },
             {
               title: '标题4',
               key: 'title4',
+              align:'center'
             },
             {
               title: '标题5',
-              key: 'title5'
+              key: 'title5',
+              align:'center'
             },
             {
               title: '标题6',
-              key: 'title6'
+              key: 'title6',
+              align:'center'
             },
             {
               title: '标题7',
-              key: 'title7'
+              key: 'title7',
+              align:'center'
             },
           ],
           data1: [

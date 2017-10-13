@@ -1,8 +1,15 @@
 <style scoped>
 label.ivu-radio-wrapper.ivu-radio-group-item{
-    border-style: none;
+  border-style: none;
+  line-height:36px;
+  width:158px;
+  font-size:24px;
+  text-align:center;
+  display:inline-block;
+  color:#131313;
 }
 label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
+  color:#131313;
   background-color: #0084c8;
   color: white;
   border-color: #0084c8;

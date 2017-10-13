@@ -3,6 +3,7 @@
   /*float: left;*/
   margin: 20px 20px 20px 20px;
 }
+
 </style>
 
 <template>

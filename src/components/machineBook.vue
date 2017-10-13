@@ -1,16 +1,26 @@
 <style scoped>
-label.ivu-radio-wrapper.ivu-radio-group-item{
-    border-style: none;
+
+
+#machineBook a{
+  width:158px;
+  font-size:24px;
+  text-align:center;
+  display:inline-block;
+  color:#131313;
+  line-height:36px;
+  margin:0;
+  padding:0
+  
 }
-label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
+.router-link-active{
   background-color: #0084c8;
-  color: white;
+  color: white !important;
   border-color: #0084c8;
   box-shadow:-1px 0 0 0  #0084c8;
-  border-radius: 2em;
+  border-radius: 18px;
 }
 #machineBookContainer{
-  background-color: lightgray;
+  background-color: #f2f2f2;
 }
 </style>
 
@@ -18,10 +28,14 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   <div id="machineBook">
     <hr>
     <br />
-    <RadioGroup v-model="value" type="button" @on-change="change()">
-      <Radio label="savings" value="savings"></Radio>
-      <Radio label="masterplan" value="masterplan"></Radio>
-    </RadioGroup>
+    <div>
+    <router-link to="/savingBook/machineBook/savings">     
+			<span  @click="changeSpan(true)" :class="sFlag?'active':'' ">savings</span>
+    </router-link>
+    <router-link to="/savingBook/machineBook/masterplan"> 
+			<span  @click="changeSpan(false)" :class="sFlag?'':'active'">masterplan</span>
+    </router-link>
+		</div>
 
   <div id="machineBookContainer">
     <router-view></router-view>
@@ -34,12 +48,12 @@ export default{
   name: 'machineBook',
   data() {
     return {
-      value: 'savings'
+      sFlag:true,
     }
   },
   methods: {
-    change: function () {
-      this.$router.push(`/savingBook/machineBook/${this.value}`)
+    changeSpan(flag){
+      this.sFlag=flag
     }
   },
   mounted: function () {

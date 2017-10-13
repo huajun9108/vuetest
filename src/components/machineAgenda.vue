@@ -13,7 +13,7 @@ export default{
           columns1: [
             {
               title: '标题1',
-              key: 'title1'
+              key: 'title1',
             },
             {
               title: '标题2',

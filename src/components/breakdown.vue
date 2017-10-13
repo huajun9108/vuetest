@@ -1,26 +1,33 @@
 <style scoped>
 label.ivu-radio-wrapper.ivu-radio-group-item{
+    border-style: none;
+}
+#breakdown a{
   background-color: #ddd;
   color: white;
+  width:130px;
+  line-height:30px;
+  font-size:18px;
+  text-align:center;
+  display:inline-block;
 }
-label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
-  background-color: #ff8b8b;
-  color: white;
-  border-left-color: #ff8b8b;
-  border-top-color: #ff8b8b;
-  border-bottom-color: #ff8b8b;
-  border-right-color: #ff8b8b;
-  box-shadow:-1px 0 0 0  #ff8b8b;
+.router-link-active{
+  background-color: #ff8b8b !important;
+
 }
 </style>
 
 <template>
   <div id="breakdown">
     <br />
-    <RadioGroup v-model="value" type="button" @on-change="change()" size="small">
-      <Radio label="list" value="list"></Radio>
-      <Radio label="pare to chat" value="pare to chat"></Radio>
-    </RadioGroup>
+    <div>
+    <router-link to="/operationKPI/machineKPI/breakdown/list">     
+			<span  @click="changeSpan(true)" :class="sFlag?'active':'' ">list</span>
+    </router-link><router-link to="/operationKPI/machineKPI/breakdown/pare to chat"> 
+			<span  @click="changeSpan(false)" :class="sFlag?'':'active'">pare to chat</span>
+    </router-link>
+   
+		</div>
     <div id="breakdownContainer">
     <br />
     <router-view></router-view>
@@ -33,12 +40,12 @@ export default{
   name: 'breakdown',
   data() {
     return {
-      value: 'list'
+       sFlag:true,
     }
   },
   methods: {
-    change: function () {
-      this.$router.push(`/operationKPI/machineKPI/breakdown/${this.value}`)
+    changeSpan(flag){
+      this.sFlag=flag
     }
   },
   mounted: function () {

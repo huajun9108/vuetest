@@ -1,13 +1,24 @@
 <style scoped>
-label.ivu-radio-wrapper.ivu-radio-group-item{
-    border-style: none;
+
+#machine a{
+  font-size:24px;
+  text-align:center;
+  display:inline-block;
+  color:#131313;
+  line-height:36px;
+  margin:0;
+  padding:0
+  
 }
-label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
+#machine a span{
+  padding:8px 30px;
+}
+.router-link-active{
   background-color: #0084c8;
-  color: white;
+  color: white !important;
   border-color: #0084c8;
   box-shadow:-1px 0 0 0  #0084c8;
-  border-radius: 2em;
+  border-radius: 18px;
 }
 #machineContainer{
   background-color: #f2f2f2;
@@ -18,11 +29,18 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   <div id="machine">
     <hr>
     <br />
-    <RadioGroup v-model="value" type="button" @on-change="change()">
-      <Radio label="overview" value="overview"></Radio>
-      <Radio label="oEE no losses" value="oEE no losses"></Radio>
-      <Radio label="grafico OEE" value="grafico OEE"></Radio>
-    </RadioGroup>
+    <div>
+    <router-link to="/loss/machine/overview">     
+			<span  @click="changeSpan(true)" :class="sFlag?'active':'' ">overview</span>
+    </router-link>
+    <router-link to="/loss/machine/OEE no losses"> 
+			<span  @click="changeSpan(false)" :class="sFlag?'':'active'">OEE no losses</span>
+    </router-link>
+    <router-link to="/loss/machine/grafico OEE"> 
+			<span  @click="changeSpan(false)" :class="sFlag?'':'active'">grafico OEE</span>
+    </router-link>
+   
+		</div>
     <div id="machineContainer">
       <router-view></router-view>
     </div>
@@ -33,15 +51,15 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   export default{
     name: 'machine',
     data() {
-      return {
-        value: 'overview'
-      }
-    },
-    methods: {
-      change: function () {
-        this.$router.push(`/loss/machine/${this.value}`)
-      },
-    },
+    return {
+      sFlag:true,
+    }
+  },
+  methods: {
+    changeSpan(flag){
+      this.sFlag=flag
+    }
+  },
     mounted: function () {
     }
   }
