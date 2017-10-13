@@ -8,7 +8,7 @@
   font-family: "微软雅黑";
 }
 .ivu-menu-item:hover{
-  background-color: #015c8b;
+  background-color: #389fd4;
   color: white;
   font-family: "微软雅黑";
 }
