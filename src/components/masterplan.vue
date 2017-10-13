@@ -2,13 +2,10 @@
   #main-charts {
     width: 100%;
     height:600px;
-<<<<<<< HEAD
-=======
   }
   #masterplan{
     background-color: #f2f2f2;
     height: 100vh;
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
   }
 </style>
 
@@ -29,8 +26,7 @@
     methods: {
       initCharts: function () {
         var myChart = echarts.init(document.getElementById('main-charts'));
-<<<<<<< HEAD
-         var option = { 
+         var option = {
                 xAxis: {
                     type: "time",  // x轴时间类型<br>        
                     position: "top", // x轴位于上方
@@ -41,24 +37,12 @@
                     axisTick:{
                       show:false
                     },
-                  
-                    
-=======
-         var option = {
-                xAxis: {
-                    type: "time",  // x轴时间类型<br>
-                    position: "top", // x轴位于上方,
-                    splitLine:{
-                      show:false,
-                    }
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
                 },
                 yAxis: {
                     type: "category",
                     data: ["项目总周期", "阶段一", "阶段二", "阶段三"].reverse(),
                      splitLine:{
                       show:true,
-<<<<<<< HEAD
                     },
                     axisTick:{
                       show:false
@@ -74,20 +58,6 @@
                 }, 
                 series: [
                  
-=======
-                    }
-                },
-                legend: {
-                    type: 'scroll',
-                    left:200,
-                    bottom: 10,
-                    data: [
-                        'plan', 'fact',
-                    ],
-                },
-                series: [
-
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
                 {
                 type: 'bar',
                 barWidth: '30',
@@ -112,21 +82,12 @@
                       normal:{
                         type:'solid',
                         color:'red',
-<<<<<<< HEAD
-                        
-                    },
-                  },
-                  data : [
-                    
-                    { xAxis: new Date()-1 ,   
-=======
 
                     },
                   },
                   data : [
 
                     { xAxis: new Date() ,
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
                       label: {
                       normal:{
                         show:true,
@@ -134,7 +95,6 @@
                         formatter :function getNowFormatDate() {
                         var date = new Date();
                         var seperator= "-";
-<<<<<<< HEAD
                     
                         var month = date.getMonth() + 1;
                         var strDate = date.getDate();
@@ -146,34 +106,15 @@
                         }
                         var currentdate = date.getFullYear() + seperator + month + seperator + strDate
 
-=======
-
-                        var month = date.getMonth() + 1;
-                        var strDate = date.getDate();
-                        if (month >= 1 && month <= 9) {
-                            month = "0" + month;
-                        }
-                        if (strDate >= 0 && strDate <= 9) {
-                            strDate = "0" + strDate;
-                        }
-                        var currentdate = date.getFullYear() + seperator + month + seperator + strDate
-
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
                         return currentdate;
                       }
                       }
                      }
                     }
                   ],
-<<<<<<< HEAD
                   
                 },
                
-=======
-
-                },
-
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
             },
             {
               name:'plan',
@@ -191,11 +132,7 @@
                   [new Date(2017,9,10), "阶段二"],
                   [new Date(2017,9,31), "阶段三"]
               ],
-<<<<<<< HEAD
                
-=======
-
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
             },
             {
                 type: 'bar',
@@ -234,11 +171,7 @@
                 ]
             }
         ]
-<<<<<<< HEAD
       } 
-=======
-      }
->>>>>>> e205137923d3688e0833042d1f569f5996743f8b
         myChart.setOption(option);
       }
 

@@ -1,7 +1,7 @@
 <style scoped>
 #oEE-charts {
-  width: 600px;
-  height: 400px;
+  width: 60%;
+  height: 600px;
 }
 #loss-machine-oEE{
   background-color: #f2f2f2;

@@ -2,6 +2,7 @@
 .table {
   float: left;
   margin: 5%;
+  width: 50vh;
 }
 #overview{
   background-color: #f2f2f2;

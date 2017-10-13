@@ -40,6 +40,7 @@ label.ivu-radio-wrapper.ivu-radio-group-item{
     <br />
     <router-view></router-view>
     </div>
+    </div>
   </div>
 </template>
 

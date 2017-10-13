@@ -46,6 +46,7 @@
     <div id="machineContainer">
       <router-view></router-view>
     </div>
+    </div>
   </div>
 </template>
 

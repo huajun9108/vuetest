@@ -1,7 +1,7 @@
 <style scoped>
   #main-charts {
-    width: 600px;
-    height: 400px;
+  width: 60%;
+  height: 600px;
   }
 </style>
 

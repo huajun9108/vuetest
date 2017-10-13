@@ -22,13 +22,23 @@
 #machineBookContainer{
   background-color: #f2f2f2;
 }
+#machineBookhr{
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+#machineBookMenu{
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
 </style>
 
 <template>
   <div id="machineBook">
+    <div id="machineBookhr">
     <hr>
-    <br />
-    <div>
+    </div>
+    <div id="machineBookMenu">
     <router-link to="/savingBook/machineBook/savings">     
 			<span  @click="changeSpan(true)" :class="sFlag?'active':'' ">savings</span>
     </router-link>

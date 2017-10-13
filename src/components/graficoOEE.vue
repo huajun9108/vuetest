@@ -1,7 +1,7 @@
 <style scoped>
   #grafico-charts {
-    width: 600px;
-    height: 400px;
+  width: 60%;
+  height: 600px;
   }
 #loss-machine-grafico{
   background-color: #f2f2f2;
