@@ -1,7 +1,11 @@
 <style  scoped>
 .table {
   float: left;
-  margin: 30px 30px 30px 30px;
+  margin: 5%;
+}
+#overview{
+  background-color: #f2f2f2;
+  height: 100vh;
 }
 </style>
 

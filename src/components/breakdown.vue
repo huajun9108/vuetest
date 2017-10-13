@@ -12,15 +12,24 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   border-right-color: #ff8b8b;
   box-shadow:-1px 0 0 0  #ff8b8b;
 }
+#breakdown{
+  background-color: #f2f2f2;
+  height: 100vh;
+}
+#breakdownMenu{
+  padding-left: 20px;
+}
 </style>
 
 <template>
   <div id="breakdown">
+    <div id="breakdownMenu">
     <br />
     <RadioGroup v-model="value" type="button" @on-change="change()" size="small">
       <Radio label="list" value="list"></Radio>
       <Radio label="pare to chat" value="pare to chat"></Radio>
     </RadioGroup>
+  </div>
     <div id="breakdownContainer">
     <br />
     <router-view></router-view>

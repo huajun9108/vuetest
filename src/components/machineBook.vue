@@ -9,20 +9,22 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   box-shadow:-1px 0 0 0  #0084c8;
   border-radius: 2em;
 }
-#machineBookContainer{
-  background-color: lightgray;
+#machineBookMenu{
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 </style>
 
 <template>
   <div id="machineBook">
-    <hr>
-    <br />
-    <RadioGroup v-model="value" type="button" @on-change="change()">
-      <Radio label="savings" value="savings"></Radio>
-      <Radio label="masterplan" value="masterplan"></Radio>
-    </RadioGroup>
-
+    <div id="machineBookMenu">
+      <hr>
+      <br />
+      <RadioGroup v-model="value" type="button" @on-change="change()">
+        <Radio label="savings" value="savings"></Radio>
+        <Radio label="masterplan" value="masterplan"></Radio>
+      </RadioGroup>
+    </div>
   <div id="machineBookContainer">
     <router-view></router-view>
   </div>

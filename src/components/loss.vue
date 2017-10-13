@@ -1,15 +1,17 @@
 <style scoped>
 #loss{
+  width: 95%;
+  height: 100vh;
+}
+#lossReuseableMenu{
   padding: 20px;
 }
-#lossContainer{
-  padding:20px 0px;
-}
 </style>
-
 <template>
   <div id="loss">
+    <div id="lossReuseableMenu">
     <ReuseableMenu default="machine" type="loss"></ReuseableMenu>
+    </div>
     <div id="lossContainer">
       <router-view></router-view>
     </div>

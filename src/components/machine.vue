@@ -9,13 +9,15 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   box-shadow:-1px 0 0 0  #0084c8;
   border-radius: 2em;
 }
-#machineContainer{
-  background-color: #f2f2f2;
+#machineMenu{
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 </style>
 
 <template>
   <div id="machine">
+    <div id="machineMenu">
     <hr>
     <br />
     <RadioGroup v-model="value" type="button" @on-change="change()">
@@ -23,6 +25,7 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
       <Radio label="oEE no losses" value="oEE no losses"></Radio>
       <Radio label="grafico OEE" value="grafico OEE"></Radio>
     </RadioGroup>
+    </div>
     <div id="machineContainer">
       <router-view></router-view>
     </div>

@@ -1,7 +1,14 @@
+<style scoped>
+  #agenda-machine{
+    height: 100vh;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-right: 2%;
+  }
+</style>
+
 <template>
-  <div>
-    <hr>
-    <br />
+  <div id="agenda-machine">
     <Table class="table" border :columns="columns1" :data="data1"></Table>
   </div>
 </template>

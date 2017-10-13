@@ -3,6 +3,10 @@
   width: 600px;
   height: 400px;
 }
+#loss-machine-oEE{
+  background-color: #f2f2f2;
+  height: 100vh;
+}
 </style>
 
 <template>

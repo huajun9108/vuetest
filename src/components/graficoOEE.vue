@@ -3,10 +3,14 @@
     width: 600px;
     height: 400px;
   }
+#loss-machine-grafico{
+  background-color: #f2f2f2;
+  height: 100vh;
+}
 </style>
 
 <template>
-  <div>
+  <div id="loss-machine-grafico">
     <div id="grafico-charts"></div>
   </div>
 </template>
