@@ -20,13 +20,15 @@
   box-shadow:-1px 0 0 0  #0084c8;
   border-radius: 18px;
 }
-#machineContainer{
-  background-color: #f2f2f2;
+#machineMenu{
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 </style>
 
 <template>
   <div id="machine">
+    <div id="machineMenu">
     <hr>
     <br />
     <div>

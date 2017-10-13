@@ -36,9 +36,16 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+<<<<<<< HEAD
       path:"/",
       component:financialReport
     },{
+=======
+     path:"/",
+     component:financialReport
+   },
+    {
+>>>>>>> e205137923d3688e0833042d1f569f5996743f8b
       path: '/financialReport',
       name: 'financialReport',
       component: financialReport

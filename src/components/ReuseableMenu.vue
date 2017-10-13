@@ -1,5 +1,11 @@
 <style scoped>
-
+.ivu-radio-group{
+    line-height:68px;
+  }
+.ivu-radio-wrapper{
+  font-size:18px;
+  margin-right: 26px;
+}
 </style>
 
 <template>

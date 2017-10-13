@@ -1,7 +1,7 @@
 <style scoped>
 #report{
   width: 95%;
-  height: 80%;
+  height: 100vh;
 }
   #reportFormTitle{
     font-size: 28px;
@@ -12,12 +12,13 @@
     text-align: center;
 }
   #tableContainer{
-    height: 800px;
+    height: 100vh;
     background-color: #f2f2f2;
-    padding: 30px;
+    padding: 20px;
     margin-right: 2%;
     overflow-y: auto;
   }
+
 </style>
 
 <template>

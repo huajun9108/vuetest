@@ -3,10 +3,14 @@
     width: 600px;
     height: 400px;
   }
+  #book-savings{
+    background-color: #f2f2f2;
+    height: 100vh;
+  }
 </style>
 
 <template>
-  <div>
+  <div id="book-savings">
     <div id="main-charts"></div>
   </div>
 </template>

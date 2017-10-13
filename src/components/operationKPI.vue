@@ -1,15 +1,18 @@
 <style  scoped>
 #kpi{
+  width: 95%;
+  height: 100vh;
+}
+#kpiReuseableMenu{
   padding: 20px;
 }
-  #kpiContainer{
-    padding:20px 0px;
-  }
 </style>
 
 <template>
   <div id="kpi">
+    <div id="kpiReuseableMenu">
     <ReuseableMenu default="machineKPI" type="operationKPI"></ReuseableMenu>
+  </div>
     <div id="kpiContainer">
       <router-view></router-view>
     </div>

@@ -11,6 +11,8 @@
     font-family: "微软雅黑";
     font-weight: bold;
     letter-spacing: 2px;
+    height: 20%;
+    padding-top: 30px;
   }
   #left-nav{
     height:100vh;
