@@ -10,7 +10,7 @@ label.ivu-radio-wrapper.ivu-radio-group-item.ivu-radio-wrapper-checked{
   border-radius: 2em;
 }
 #machineContainer{
-  background-color: lightgray;
+  background-color: #f2f2f2;
 }
 </style>
 

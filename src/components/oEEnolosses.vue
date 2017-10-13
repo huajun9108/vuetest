@@ -20,53 +20,87 @@ export default {
   methods: {
     initCharts: function() {
       var myChart = echarts.init(document.getElementById('oEE-charts'));
-      var option = {  
-          title: {},
-          legend: {},
-          calculable: false,
-          xAxis: [    {
-          type: 'category',
-          axisTick: {
-            show: true,
-            alignWithLabel: true,
-            length: 4,
-            lineStyle: {
-              color: '#ff8b8b',
-              type: 'dotted',
-              width: 4,
-            },
-          },
-          axisLabel: {
-            show: false,
-          },
-          data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']    
-        }  ],
-          yAxis: [    {
-          show: false,
-          type: 'value',
-        }  ],
-          series: [    {   
-          barGap: '0',
-          name: '2011年',
-                type: 'bar',
-          itemStyle: {
+      var option = {
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis: {
+        type: 'category',
+        data: ['改善前', '改善后'],
+        axisTick: {
+          alignWithLabel: true,
+        },
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [{
+          name: '直接访问',
+          type: 'bar',
+          stack: '总量',
+          barMaxWidth: 60,
+          label: {
             normal: {
-              color: '#0084c8'
+              show: true,
+              position: 'insideRight'
             }
           },
-                data: [18203, 23489, 29034, 104970, 131744, 630230]    
-        },      {      
-          name: '2012年',
-                type: 'bar',
-          itemStyle: {
+          data: [70, 95]
+        },
+        {
+          name: '邮件营销',
+          type: 'bar',
+          stack: '总量',
+          label: {
             normal: {
-              color: '#ddd'
+              show: true,
+              position: 'insideRight'
             }
           },
-                data: [19325, 23438, 31000, 121594, 134141, 681807]    
-        }  ]
-      };
-      myChart.setOption(option);
+          data: [5]
+        },
+        {
+          name: '联盟广告',
+          type: 'bar',
+          stack: '总量',
+          label: {
+            normal: {
+              show: true,
+              position: 'insideRight'
+            }
+          },
+          data: [10]
+        },
+        {
+          name: '视频广告',
+          type: 'bar',
+          stack: '总量',
+          label: {
+            normal: {
+              show: true,
+              position: 'insideRight'
+            }
+          },
+          data: [10]
+        },
+        {
+          name: '搜索引擎',
+          type: 'bar',
+          stack: '总量',
+          label: {
+            normal: {
+              show: true,
+              position: 'insideRight'
+            }
+          },
+          data: [5, 5]
+        }
+      ]
+    };
+    myChart.setOption(option);
     }
 
   },

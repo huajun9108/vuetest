@@ -1,6 +1,7 @@
 <style scoped>
 #report{
-  width: 90%;
+  width: 95%;
+  height: 80%;
 }
   #reportFormTitle{
     font-size: 28px;
@@ -11,8 +12,11 @@
     text-align: center;
 }
   #tableContainer{
-    background-color: lightgray;
+    height: 800px;
+    background-color: #f2f2f2;
     padding: 30px;
+    margin-right: 2%;
+    overflow-y: auto;
   }
 </style>
 
@@ -63,6 +67,195 @@ export default{
             },
           ],
           data1: [
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
+            {
+              title1: '',
+              title2: '',
+              title3: '',
+              title4: '',
+              title5: '',
+              title6: '',
+              title7: '',
+            },
             {
               title1: '',
               title2: '',
